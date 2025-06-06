@@ -13,7 +13,7 @@ import { ToolsEducation } from "@/components/tools-education";
 import { TextInput } from "@/components/text-input";
 import { motion } from "framer-motion";
 import { useToolsFunctions } from "@/hooks/use-tools";
-import Echo from "./components/echo";
+import Video from "./components/video";
 
 const App: React.FC = () => {
   // State for voice selection
@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
   return (
     <main className="h-full">
-      <Echo />
+      <Video />
       <motion.div
         className="container flex flex-col items-center justify-center mx-auto max-w-3xl my-20 p-12 border rounded-lg shadow-xl"
         initial={{ opacity: 0, y: 20 }}

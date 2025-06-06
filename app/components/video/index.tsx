@@ -3,7 +3,7 @@
 import ReactPlayer from "react-player";
 import { useState } from "react";
 
-export default function Echo() {
+export default function Video() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isInteracting, setIsInteracting] = useState(false);
 
