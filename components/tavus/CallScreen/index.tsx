@@ -36,15 +36,17 @@ export const CallScreen = ({
   };
 
   return (
-    <div>
-      <Video />
-      <Call />
-
-      <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
-
-      <button onClick={handleToggleInteracting}>
-        {isInteracting ? "Stop" : "Interact"}
-      </button>
-    </div>
+    <>
+      <div>
+        <Video />
+        <Call />
+        <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
+      </div>
+      <div className="flex flex-col justify-center items-center">
+        <button onClick={handleToggleInteracting}>
+          {isInteracting ? "Stop" : "Interact"}
+        </button>
+      </div>
+    </>
   );
 };
