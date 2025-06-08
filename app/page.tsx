@@ -55,6 +55,8 @@ const App: React.FC = () => {
       {/* <Video /> */}
       <Tavus />
 
+      <div className="h-screen w-screen" />
+
       <motion.div
         className="container flex flex-col items-center justify-center mx-auto max-w-3xl my-20 p-12 border rounded-lg shadow-xl"
         initial={{ opacity: 0, y: 20 }}
