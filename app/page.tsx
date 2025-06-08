@@ -13,7 +13,7 @@ import { ToolsEducation } from "@/components/tools-education";
 import { TextInput } from "@/components/text-input";
 import { motion } from "framer-motion";
 import { useToolsFunctions } from "@/hooks/use-tools";
-import Video from "./components/video";
+// import Video from "./components/video";
 import Tavus from "./components/tavus";
 
 const App: React.FC = () => {
@@ -52,7 +52,7 @@ const App: React.FC = () => {
 
   return (
     <main className="h-full">
-      <Video />
+      {/* <Video /> */}
       <Tavus />
 
       <motion.div
