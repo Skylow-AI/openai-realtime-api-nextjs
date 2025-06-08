@@ -9,7 +9,7 @@ import { createConversation, endConversation } from "@/app/api/tavus";
 import { IConversation } from "@/types/tavus";
 import { useToast } from "@/hooks/use-toast";
 
-function App() {
+function Tavus() {
   const { toast } = useToast();
   const [screen, setScreen] = useState<"welcome" | "hairCheck" | "call">(
     "welcome"
@@ -75,4 +75,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tavus;
