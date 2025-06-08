@@ -1,3 +1,5 @@
+"use server";
+
 import { TAVUS_API_KEY } from "@/config/tavus";
 
 export const endConversation = async (conversationId: string) => {
