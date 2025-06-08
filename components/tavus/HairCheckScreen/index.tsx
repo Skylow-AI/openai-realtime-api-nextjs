@@ -20,9 +20,9 @@ export const HairCheckScreen = ({
     }
   }, [daily, localSessionId]);
 
-  useEffect(() => {
-    handleJoin();
-  }, []);
+  // useEffect(() => {
+  //   handleJoin();
+  // }, []);
 
   return (
     <div>
