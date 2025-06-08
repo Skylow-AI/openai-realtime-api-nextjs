@@ -37,7 +37,9 @@ export const CallScreen = ({
   };
 
   const handleToggleInteracting = () => {
-    setIsInteracting(!isInteracting);
+    const newIsInteracting = !isInteracting;
+    setIsPlaying(!newIsInteracting);
+    setIsInteracting(newIsInteracting);
   };
 
   return (
