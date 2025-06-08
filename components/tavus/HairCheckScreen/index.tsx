@@ -20,6 +20,10 @@ export const HairCheckScreen = ({
     }
   }, [daily, localSessionId]);
 
+  useEffect(() => {
+    handleJoin();
+  }, []);
+
   return (
     <div>
       <Video id={localSessionId} className="max-h-[70vh]" />
