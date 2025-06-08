@@ -12,6 +12,7 @@ export const createConversation = async (): Promise<IConversation> => {
         "x-api-key": TAVUS_API_KEY,
       },
       body: JSON.stringify({
+        replica_id: "rf4703150052", // Charlie
         persona_id: "p9a95912", // Stock Demo Persona
       }),
     });
