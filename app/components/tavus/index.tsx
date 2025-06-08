@@ -50,7 +50,7 @@ function Tavus() {
       console.error(error);
     } finally {
       setConversation(null);
-      setScreen("welcome");
+      // setScreen("welcome");
     }
   };
 
