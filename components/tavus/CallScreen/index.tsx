@@ -4,6 +4,7 @@ import { IConversation } from "@/types/tavus";
 import { CameraSettings } from "../CameraSettings";
 
 import { Call } from "../Call";
+import Video from "@/app/components/video";
 
 export const CallScreen = ({
   conversation,
@@ -30,7 +31,9 @@ export const CallScreen = ({
 
   return (
     <div>
+      <Video />
       <Call />
+
       <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
     </div>
   );
