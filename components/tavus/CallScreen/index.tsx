@@ -1,12 +1,17 @@
-import { useEffect } from 'react';
-import { useDaily } from '@daily-co/daily-react';
-import { IConversation } from '@/types';
-import { CameraSettings } from '../CameraSettings';
+import { useEffect } from "react";
+import { useDaily } from "@daily-co/daily-react";
+import { IConversation } from "@/types/tavus";
+import { CameraSettings } from "../CameraSettings";
 
+import { Call } from "../Call";
 
-import { Call } from '../Call';
-
-export const CallScreen = ({ conversation, handleEnd }: { conversation: IConversation, handleEnd: () => void }) => {
+export const CallScreen = ({
+  conversation,
+  handleEnd,
+}: {
+  conversation: IConversation;
+  handleEnd: () => void;
+}) => {
   const daily = useDaily();
 
   useEffect(() => {
@@ -21,13 +26,12 @@ export const CallScreen = ({ conversation, handleEnd }: { conversation: IConvers
   const handleLeave = async () => {
     await daily?.leave();
     handleEnd();
-  }
+  };
 
-  return <div>
-    <Call />
-    <CameraSettings
-      actionLabel='Leave Call'
-      onAction={handleLeave}
-    />
-  </div>;
+  return (
+    <div>
+      <Call />
+      <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
+    </div>
+  );
 };
