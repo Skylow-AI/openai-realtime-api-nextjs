@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { DailyProvider } from "@daily-co/daily-react";
-import { WelcomeScreen } from "@/components/WelcomeScreen";
-import { HairCheckScreen } from "@/components/HairCheckScreen";
-import { CallScreen } from "@/components/CallScreen";
-import { createConversation, endConversation } from "@/api";
-import { IConversation } from "@/types";
+import { WelcomeScreen } from "@/components/tavus/WelcomeScreen";
+import { HairCheckScreen } from "@/components/tavus/HairCheckScreen";
+import { CallScreen } from "@/components/tavus/CallScreen";
+import { createConversation, endConversation } from "@/app/api/tavus";
+import { IConversation } from "@/types/tavus";
 import { useToast } from "@/hooks/use-toast";
 
 function App() {
