@@ -31,6 +31,7 @@ export const CallScreen = ({
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [isInteracting, setIsInteracting] = useState(false);
+  const [isFlashing, setIsFlashing] = useState(false);
 
   const handleTogglePlaying = () => {
     setIsPlaying(!isPlaying);
@@ -40,11 +41,21 @@ export const CallScreen = ({
     const newIsInteracting = !isInteracting;
     setIsPlaying(!newIsInteracting);
     setIsInteracting(newIsInteracting);
+    setIsFlashing(true);
+    setTimeout(() => setIsFlashing(false), 500); // Reset after animation
   };
 
   return (
     <>
-      <div>
+      <div className="relative">
+        {isFlashing && (
+          <div
+            className="fixed inset-0 bg-white opacity-0 animate-flash z-50"
+            style={{
+              animation: "flash 0.5s ease-in-out",
+            }}
+          />
+        )}
         <div className={isInteracting ? "hidden" : ""}>
           <Video isPlaying={isPlaying} />
         </div>
@@ -61,6 +72,19 @@ export const CallScreen = ({
           </button>
         </div>
       </div>
+      <style jsx>{`
+        @keyframes flash {
+          0% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      `}</style>
     </>
   );
 };
