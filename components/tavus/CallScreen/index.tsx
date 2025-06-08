@@ -38,8 +38,12 @@ export const CallScreen = ({
   return (
     <>
       <div>
-        <Video />
-        <Call />
+        <div className={isInteracting ? "hidden" : ""}>
+          <Video />
+        </div>
+        <div className={isInteracting ? "" : "hidden"}>
+          <Call />
+        </div>
         <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
       </div>
       <div className="flex flex-col justify-center items-center">
