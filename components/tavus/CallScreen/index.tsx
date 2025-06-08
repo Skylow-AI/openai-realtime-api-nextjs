@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDaily } from "@daily-co/daily-react";
 import { IConversation } from "@/types/tavus";
 import { CameraSettings } from "../CameraSettings";
@@ -29,12 +29,22 @@ export const CallScreen = ({
     handleEnd();
   };
 
+  const [isInteracting, setIsInteracting] = useState(false);
+
+  const handleToggleInteracting = () => {
+    setIsInteracting(!isInteracting);
+  };
+
   return (
     <div>
       <Video />
       <Call />
 
       <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
+
+      <button onClick={handleToggleInteracting}>
+        {isInteracting ? "Stop" : "Interact"}
+      </button>
     </div>
   );
 };

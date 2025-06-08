@@ -5,15 +5,15 @@ import { useState } from "react";
 
 export default function Video() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isInteracting, setIsInteracting] = useState(false);
+  // const [isInteracting, setIsInteracting] = useState(false);
 
   const handleTogglePlaying = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const handleToggleInteracting = () => {
-    setIsInteracting(!isInteracting);
-  };
+  // const handleToggleInteracting = () => {
+  //   setIsInteracting(!isInteracting);
+  // };
 
   // const handleKeyDown = (event: KeyboardEvent) => {
   //   if (event.key === " ") {
@@ -40,9 +40,9 @@ export default function Video() {
       <button onClick={handleTogglePlaying}>
         {isPlaying ? "Pause" : "Play"}
       </button>
-      <button onClick={handleToggleInteracting}>
+      {/* <button onClick={handleToggleInteracting}>
         {isInteracting ? "Stop" : "Interact"}
-      </button>
+      </button> */}
     </div>
   );
 }
