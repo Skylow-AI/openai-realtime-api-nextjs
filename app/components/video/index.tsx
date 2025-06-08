@@ -1,15 +1,14 @@
 "use client";
 
 import ReactPlayer from "react-player";
-import { useState } from "react";
 
-export default function Video() {
-  const [isPlaying, setIsPlaying] = useState(false);
+export default function Video({ isPlaying }: { isPlaying: boolean }) {
+  // const [isPlaying, setIsPlaying] = useState(false);
   // const [isInteracting, setIsInteracting] = useState(false);
 
-  const handleTogglePlaying = () => {
-    setIsPlaying(!isPlaying);
-  };
+  // const handleTogglePlaying = () => {
+  //   setIsPlaying(!isPlaying);
+  // };
 
   // const handleToggleInteracting = () => {
   //   setIsInteracting(!isInteracting);
@@ -37,9 +36,9 @@ export default function Video() {
         // width="100%"
         // height="100%"
       />
-      <button onClick={handleTogglePlaying}>
+      {/* <button onClick={handleTogglePlaying}>
         {isPlaying ? "Pause" : "Play"}
-      </button>
+      </button> */}
       {/* <button onClick={handleToggleInteracting}>
         {isInteracting ? "Stop" : "Interact"}
       </button> */}

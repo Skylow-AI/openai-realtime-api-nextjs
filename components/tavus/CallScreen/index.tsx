@@ -29,7 +29,12 @@ export const CallScreen = ({
     handleEnd();
   };
 
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isInteracting, setIsInteracting] = useState(false);
+
+  const handleTogglePlaying = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   const handleToggleInteracting = () => {
     setIsInteracting(!isInteracting);
@@ -39,13 +44,16 @@ export const CallScreen = ({
     <>
       <div>
         <div className={isInteracting ? "hidden" : ""}>
-          <Video />
+          <Video isPlaying={isPlaying} />
         </div>
         <div className={isInteracting ? "" : "hidden"}>
           <Call />
         </div>
         <div className="fixed bottom-0 left-0 right-0 z-50 flex flex-col justify-center items-center">
           <CameraSettings actionLabel="Leave Call" onAction={handleLeave} />
+          <button onClick={handleTogglePlaying}>
+            {isPlaying ? "Pause" : "Play"}
+          </button>
           <button onClick={handleToggleInteracting}>
             {isInteracting ? "Stop" : "Interact"}
           </button>
