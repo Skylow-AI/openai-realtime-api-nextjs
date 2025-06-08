@@ -75,7 +75,7 @@ export const CallScreen = ({
       <style jsx>{`
         @keyframes flash {
           0% {
-            opacity: 0;
+            opacity: 1;
           }
           50% {
             opacity: 0.5;
