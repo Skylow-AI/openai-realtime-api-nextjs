@@ -28,7 +28,7 @@ export default function Video() {
 
   // Render a YouTube video player
   return (
-    <div className="flex flex-col h-screen w-screen items-center justify-center">
+    <div className="flex flex-col w-screen items-center justify-center">
       <ReactPlayer
         url="https://ucarecdn.com/398f91ab-6353-4ecc-ac4f-80a7a657c392/"
         playing={isPlaying}
